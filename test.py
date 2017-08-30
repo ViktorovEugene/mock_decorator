@@ -6,10 +6,10 @@ import tested_module
 
 class TestDecoratorMethods(unittest.TestCase):
     def setUp(self):
-        self.decorators_backup = some_library.tag_decorator
+        pass
 
     def tearDown(self):
-        some_library.tag_decorator = self.decorators_backup
+        pass
 
     def test_split(self):
         self.assertEqual(tested_module.func_to_test()[:3], '<p>')
