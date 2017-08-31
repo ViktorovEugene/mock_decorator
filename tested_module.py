@@ -4,6 +4,12 @@ from some_library import tag_decorator
 RESULT = 'result'
 
 
-@tag_decorator
-def func_to_test():
-    return RESULT
+class MockMethod:
+    @staticmethod
+    @tag_decorator
+    def static_method():
+        return RESULT\
+
+    @tag_decorator
+    def instance_method(self):
+        return RESULT
